@@ -1,5 +1,6 @@
-FROM ubuntu
-MAINTAINER Syoyo Fujita(syoyo@lighttransport.com)
+FROM ubuntu:12.04
+MAINTAINER Syoyo Fujita(syoyo@lighttransport.com) -- ORIGINAL
+MAINTAINER e6 -- for AMD
 
 RUN apt-get update
 RUN apt-get -y --force-yes install x-window-system
@@ -11,10 +12,17 @@ RUN apt-get install -y libgtk2.0-0
 RUN apt-get install -y twm
 RUN apt-get install -y curl
 RUN apt-get install -y unzip
-RUN apt-get install -y 
-RUN apt-get install -y 
-RUN apt-get install -y 
-RUN apt-get install -y 
+# INSTALL FOR AMD DRIVERS TO INSTALL
+# RUN apt-get install -y linux-headers-3.16.0-25-generic
+RUN apt-get install -y make
+RUN apt-get install -y gcc
+RUN apt-get install -y dh-modaliases
+RUN apt-get install -y execstack
+RUN apt-get install -y dpkg-dev
+RUN apt-get install -y debhelper
+RUN apt-get install -y dkms
+RUN apt-get install -y lib32gcc1
+
 
 # AMD --
 # check for newest version http://support.amd.com/en-us/download/desktop?os=Linux+x86
