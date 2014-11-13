@@ -9,6 +9,7 @@ RUN apt-get install -y x11vnc
 RUN apt-get install -y mesa-utils
 RUN apt-get install -y libgtk2.0-0
 RUN apt-get install -y twm
+RUN apt-get install -y wget
 RUN apt-get install -y unzip
 
 # AMD --
