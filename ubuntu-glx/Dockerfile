@@ -11,10 +11,14 @@ RUN apt-get install -y libgtk2.0-0
 RUN apt-get install -y twm
 RUN apt-get install -y curl
 RUN apt-get install -y unzip
+RUN apt-get install -y 
+RUN apt-get install -y 
+RUN apt-get install -y 
+RUN apt-get install -y 
 
 # AMD --
 # check for newest version http://support.amd.com/en-us/download/desktop?os=Linux+x86
-RUN curl --referer "http://support.amd.com/en-us/download/desktop?os=Linux+x86" -o amd-catalyst-14-9-linux-x86-x86-64.zip http://www2.ati.com/drivers/linux/amd-catalyst-14-9-linux-x86-x86-64.zip
+RUN cd /tmp && curl --referer "http://support.amd.com/en-us/download/desktop?os=Linux+x86" -o amd-catalyst-14-9-linux-x86-x86-64.zip http://www2.ati.com/drivers/linux/amd-catalyst-14-9-linux-x86-x86-64.zip
 
 
 # FOR NVIDIA --
