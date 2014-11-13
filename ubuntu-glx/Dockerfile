@@ -22,7 +22,7 @@ RUN apt-get install -y dpkg-dev
 RUN apt-get install -y debhelper
 RUN apt-get install -y dkms
 RUN apt-get install -y lib32gcc1
-
+RUN echo 'export DISPLAY=:0' >> ~/.bashrc
 
 # AMD --
 # check for newest version http://support.amd.com/en-us/download/desktop?os=Linux+x86
